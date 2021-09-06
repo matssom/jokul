@@ -160,6 +160,7 @@ export const Select = forwardRef<HTMLSelectElement, Props>(
         // add support for opening dropdown with arrowkey down as expected from native select
         function handleArrowDown(e: KeyboardEvent<HTMLButtonElement>) {
             if (e.key === "ArrowDown" && !dropdownIsShown) {
+                e.preventDefault();
                 buttonRef.current?.click();
             }
         }
@@ -235,7 +236,7 @@ export const Select = forwardRef<HTMLSelectElement, Props>(
                         aria-haspopup="listbox"
                         onBlur={handleBlur}
                         onFocus={handleFocus}
-                        onKeyUp={handleArrowDown}
+                        onKeyDown={handleArrowDown}
                     >
                         {selectedValueLabel}
                     </button>
