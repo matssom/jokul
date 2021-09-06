@@ -48,6 +48,18 @@ export const Example = ({ boolValues, choiceValues }: ExampleComponentProps) => 
         console.log("Blur: ", input);
     };
 
+    useEffect(() => {
+        document.addEventListener("focuswithin", (e) => {
+            console.log(e.currentTarget);
+        });
+
+        return () => {
+            document.removeEventListener("focuswithin", (e) => {
+                console.log(e.currentTarget);
+            });
+        };
+    }, []);
+
     return (
         <C
             ref={selectRef}

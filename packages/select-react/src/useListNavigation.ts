@@ -50,7 +50,7 @@ function handleMoveTo(direction: Direction, { event, list, currentFocus }: MoveD
 }
 
 function handleListKeyNav({ list, event, search, searchResetTimer }: EventDetails, moveFunction = handleMoveTo) {
-    const { key, target } = event;
+    const { key, target, shiftKey } = event;
     const currentFocus = target as HTMLButtonElement;
 
     const moveDetails = {
@@ -75,6 +75,11 @@ function handleListKeyNav({ list, event, search, searchResetTimer }: EventDetail
         case "Tab":
             // in a standard select, tab does nothing in-menu
             event.preventDefault();
+            // shift + tab should revert focus to searchable select
+            if (shiftKey) {
+                const searchField = list.parentElement?.previousElementSibling?.previousElementSibling;
+                searchField && (searchField as HTMLInputElement).focus();
+            }
             break;
         case "Enter" || " ":
             break;
@@ -99,6 +104,12 @@ function moveFocusTo(direction: Direction, list: HTMLUListElement, current: HTML
                 const prevItem = prevLI.querySelector<HTMLButtonElement>(`[role="option"]`);
                 if (prevItem) {
                     prevItem.focus();
+                }
+            } else {
+                // move focus to searchable Select when moving up from first choice
+                const listWrapper = list.parentElement;
+                if (listWrapper?.previousElementSibling?.previousElementSibling) {
+                    (listWrapper?.previousElementSibling.previousElementSibling as HTMLInputElement).focus();
                 }
             }
             break;

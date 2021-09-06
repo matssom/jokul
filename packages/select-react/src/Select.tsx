@@ -45,11 +45,14 @@ function toLower(str = "") {
 function focusSelected(listEl: HTMLElement, listId: string, selected: string | undefined) {
     let focusedItem: HTMLElement | null;
     if (selected !== undefined) {
-        // move focus to selected option
-        focusedItem = listEl.querySelector(`#${listId}__${toLower(selected)}`);
+        // move focus to selected option, or first option if hidden
+        focusedItem =
+            listEl.querySelector(`#${listId}__${toLower(selected)}:not([hidden])`) ||
+            listEl.querySelector('[role="option"]:not([hidden])');
+        console.log(focusedItem);
     } else {
         // move focus to first option
-        focusedItem = listEl.querySelector('[role="option"]');
+        focusedItem = listEl.querySelector('[role="option"]:not([hidden])');
     }
     focusedItem && focusedItem.focus();
 }
@@ -165,6 +168,20 @@ export const Select = forwardRef<HTMLSelectElement, Props>(
             }
         }
 
+        function handleInputNavigation(e: KeyboardEvent<HTMLInputElement>) {
+            if (e.key === "ArrowDown" && dropdownIsShown) {
+                e.preventDefault();
+                const listElement = listRef.current;
+                listElement && focusSelected(listElement, listId, value);
+                return;
+            }
+
+            if (e.key === "Escape") {
+                e.preventDefault();
+                buttonRef.current?.click();
+            }
+        }
+
         // Handle focus and blur of hidden select element
         useEffect(() => {
             const select = selectRef.current;
@@ -225,6 +242,7 @@ export const Select = forwardRef<HTMLSelectElement, Props>(
                             className="jkl-select__search-input"
                             onBlur={handleBlur}
                             onFocus={handleFocus}
+                            onKeyUp={handleInputNavigation}
                         />
                     )}
                     <button
@@ -260,6 +278,7 @@ export const Select = forwardRef<HTMLSelectElement, Props>(
                             {visibleItems.map((item, i) => (
                                 <li key={item.value} hidden={!item.visible}>
                                     <button
+                                        hidden={!item.visible}
                                         type="button"
                                         id={`${listId}__${toLower(item.value)}`}
                                         className="jkl-select__option"
