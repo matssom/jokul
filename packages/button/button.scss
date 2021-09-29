@@ -61,15 +61,9 @@ $button-wrapper-animation-safe-area: 10px;
 .jkl-button-wrapper {
     height: $button-height--normal;
     overflow: hidden;
-    padding: $button-wrapper-animation-safe-area;
-    @supports (clip-path: inset(-18% -18% -18% -18%)) {
-        overflow: initial;
-        clip-path: inset(-18% -18% -18% -18%);
-        padding: 0;
-    }
 
     &__slider {
-        @include motion("standard", "productive");
+        @include motion("easeInBounceOut", "productive");
         transition-property: transform;
         &--show-loader {
             transform: translateY(-60%);
@@ -78,15 +72,14 @@ $button-wrapper-animation-safe-area: 10px;
 
     &__loader {
         display: flex;
-        padding: 0 $button-padding;
+        padding: 0;
         align-items: center;
+        justify-content: center;
         height: $button-height--normal;
-        min-width: $button-min-width--normal;
     }
 
     &--compact {
         height: $button-height--compact;
-        min-width: $button-min-width--compact;
 
         .jkl-button-wrapper__slider {
             &--show-loader {
@@ -115,6 +108,13 @@ a.jkl-button {
     line-height: $button-height--normal;
     cursor: pointer;
     user-select: none;
+    overflow: hidden;
+    padding: $button-wrapper-animation-safe-area;
+    @supports (clip-path: inset(-18% -18% -18% -18%)) {
+        overflow: initial;
+        clip-path: inset(-18% -18% -18% -18%);
+        padding: 0;
+    }
 
     -moz-osx-font-smoothing: auto;
     -webkit-font-smoothing: auto;
