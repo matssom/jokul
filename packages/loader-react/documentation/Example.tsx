@@ -1,39 +1,39 @@
 import React from "react";
+import { ExampleComponentProps } from "../../../doc-utils";
 import { Loader } from "../src";
+import "./styles.scss";
 
-const Example = () => (
-    <section>
-        <Loader textDescription="Den som venter på noe godt…" />
-        <div
-            style={{
-                marginTop: "20px",
-                border: "1px solid black",
-                borderRadius: "20px",
-                height: "40px",
-                width: "200px",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-            }}
-        >
-            <Loader textDescription="Laster…" inline />
-        </div>
-        <div
-            style={{
-                marginTop: "20px",
-                border: "1px solid black",
-                borderRadius: "20px",
-                height: "40px",
-                width: "200px",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                backgroundColor: "black",
-            }}
-        >
-            <Loader textDescription="Laster…" inline negative />
-        </div>
-    </section>
-);
+type LoaderVariant = "Standard" | "Inline" | "Kompakt inline";
 
-export default Example;
+export default function LoaderExample({ boolValues, choiceValues }: ExampleComponentProps) {
+    const inverted = boolValues && boolValues["Invertert"];
+
+    const variant = choiceValues && (choiceValues["Variant"] as LoaderVariant);
+    let inline = false;
+    let compact = false;
+    switch (variant) {
+        case "Inline":
+            inline = true;
+            break;
+        case "Kompakt inline":
+            inline = true;
+            compact = true;
+            break;
+        case "Standard":
+        default:
+            break;
+    }
+
+    return (
+        <div className="jkl-loader-example">
+            <div>
+                <Loader
+                    negative={inverted}
+                    inline={inline}
+                    forceCompact={compact}
+                    textDescription="Eksempelbeskrivelse for en loader"
+                />
+            </div>
+        </div>
+    );
+}

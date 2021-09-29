@@ -2,6 +2,7 @@ import React from "react";
 import classNames from "classnames";
 
 interface Props {
+    forceCompact?: boolean;
     textDescription: string;
     /** @deprecated */
     negative?: boolean;
@@ -11,6 +12,7 @@ interface Props {
     politeness?: "polite" | "assertive";
 }
 export const Loader = ({
+    forceCompact,
     textDescription,
     negative = false,
     inline = false,
@@ -21,6 +23,7 @@ export const Loader = ({
     const componentClassName = classNames("jkl-loader", className, {
         "jkl-loader--negative": negative,
         "jkl-loader--inline": inline,
+        "jkl-loader--compact": forceCompact,
     });
 
     return (

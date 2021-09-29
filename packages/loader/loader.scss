@@ -4,9 +4,11 @@
 @import "~@fremtind/jkl-core/_functions.scss";
 
 $loader-dot-size: rem(18px);
-$loader-dot-size--inline: rem(8px);
+$loader-dot-size--inline: rem(7px);
+$loader-dot-size--inline-compact: rem(5px);
 $loader-spacing: $component-spacing--xxl;
-$loader-spacing--inline: $component-spacing--xl;
+$loader-spacing--inline: $component-spacing--large;
+$loader-spacing--inline-compact: $component-spacing--small;
 $loader-animation-properties: 2500ms linear infinite;
 
 $loader-color: jkl.$color-granitt;
@@ -54,6 +56,18 @@ $loader-color--inverted: jkl.$color-snohvit;
         }
         &--middle {
             margin-right: $loader-spacing--inline;
+        }
+    }
+
+    &--inline.jkl-loader--compact > .jkl-loader__dot {
+        height: $loader-dot-size--inline-compact;
+        width: $loader-dot-size--inline-compact;
+
+        &--left {
+            margin-right: $loader-spacing--inline-compact * 0.9;
+        }
+        &--middle {
+            margin-right: $loader-spacing--inline-compact;
         }
     }
 
