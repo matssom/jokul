@@ -19,6 +19,7 @@ export const Loader = ({
     className,
     dataTestAutoId = "jkl-loader",
     politeness = "polite",
+    ...rest
 }: Props) => {
     const componentClassName = classNames("jkl-loader", className, {
         "jkl-loader--negative": negative,
@@ -36,6 +37,7 @@ export const Loader = ({
             role="alert"
             aria-busy="true"
             aria-live={politeness}
+            {...rest}
         >
             <span className="jkl-loader__dot jkl-loader__dot--left" />
             <span className="jkl-loader__dot jkl-loader__dot--middle" />
