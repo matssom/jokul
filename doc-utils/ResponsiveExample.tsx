@@ -7,7 +7,7 @@ export interface Props {
     component: FC<ExampleComponentProps>;
     title?: string;
     knobs?: {
-        boolProps?: Array<string>;
+        boolProps?: Array<string | { prop: string; defaultValue: boolean }>;
         choiceProps?: Array<ChoiceProp>;
     };
 }
