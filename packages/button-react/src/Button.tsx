@@ -48,7 +48,7 @@ const makeButtonComponent = (buttonType: ValidButtons) => {
                         >
                             {children}
                             {loader && (
-                                <div className="jkl-button-wrapper__loader jkl-layout-spacing--small-top">
+                                <div className="jkl-button-wrapper__loader">
                                     <Loader
                                         textDescription={loader.textDescription}
                                         negative={buttonType === "primary" || inverted}

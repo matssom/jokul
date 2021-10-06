@@ -63,10 +63,10 @@ $button-wrapper-animation-safe-area: 10px;
     overflow: hidden;
 
     &__slider {
-        @include motion("easeInBounceOut", "productive");
+        @include motion("standard");
         transition-property: transform;
         &--show-loader {
-            transform: translateY(-60%);
+            transform: translateY(-50%);
         }
     }
 
@@ -83,7 +83,7 @@ $button-wrapper-animation-safe-area: 10px;
 
         .jkl-button-wrapper__slider {
             &--show-loader {
-                transform: translateY(-63%);
+                transform: translateY(-50%);
             }
         }
 
