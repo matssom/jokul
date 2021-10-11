@@ -1,4 +1,17 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-yarn commitlint --edit $1
+function yes_or_no {
+    while true; do
+        read -p "$* [Y/n]: " yn
+        case $yn in
+            [Nn]*) echo "Aborted" ; return  1 ;;
+            *) return 0  ;;
+        esac
+    done
+}
+
+until yarn commitlint --edit $1; do
+  echo ""
+  exec < /dev/tty && yes_or_no "Edit and retry?" && vi $1 || true
+done
