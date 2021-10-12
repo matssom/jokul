@@ -209,22 +209,24 @@ $select-hover-option-color--inverted: $svaberg;
             content: "";
         }
 
-        &:focus {
-            color: $select-focus-color;
+        &:focus,
+        &:hover {
+            /* color: $select-focus-color;
             color: var(--select-focus-color);
 
             &::before {
                 content: "→ ";
                 padding-right: $component-spacing--small;
-            }
+            } */
+            background-color: jkl.$color-varde;
         }
 
-        &:hover {
+        /* &:hover {
             color: $select-hover-option-color;
             color: var(--select-hover-option-color);
-        }
+        } */
 
-        &[aria-selected="true"]:not(:focus) {
+        &[aria-selected="true"]/* :not(:focus) */ {
             &::after {
                 $mask-image-url: url('data:image/svg+xml; utf8, <svg width="17" height="13" viewBox="0 0 17 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 8.52632L4.6 12L16 1" stroke="black"/></svg>');
                 background-color: $select-focus-color;
