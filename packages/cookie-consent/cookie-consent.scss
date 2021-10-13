@@ -37,7 +37,7 @@ $container-width--compact: rem(320px);
     left: 0;
     right: 0;
     width: 100%;
-    padding: $layout-spacing--medium $layout-spacing--medium rem(30px) $layout-spacing--medium;
+    padding: $spacing-xl $spacing-xl rem(30px) $spacing-xl;
     min-width: $container-width--compact;
     max-width: $container-width;
     background-color: jkl.$color-snohvit;
@@ -46,7 +46,7 @@ $container-width--compact: rem(320px);
     transition: 0.2s;
 
     &__checklist {
-        margin-bottom: $component-spacing--large;
+        margin-bottom: $spacing-m;
     }
 
     @include jkl.text-style("body");
@@ -57,26 +57,26 @@ $container-width--compact: rem(320px);
 
     &__header {
         @include jkl.text-style("heading-3");
-        margin-bottom: $layout-spacing--small;
+        margin-bottom: $spacing-l;
     }
 
     &__checkbox {
-        margin-bottom: $component-spacing--small;
-        margin-top: $component-spacing--xl;
+        margin-bottom: $spacing-xs;
+        margin-top: $spacing-l;
     }
 
     &__button-group {
-        margin-top: $layout-spacing--medium;
+        margin-top: $spacing-xl;
 
         & > :not(:first-child) {
-            margin-left: $layout-spacing--small;
+            margin-left: $spacing-l;
         }
     }
 
     @include small-device {
-        top: $layout-spacing--medium;
-        margin: $layout-spacing--small;
-        max-width: calc(100% - #{$layout-spacing--small} - #{$layout-spacing--small});
-        padding: $layout-spacing--small;
+        top: $spacing-xl;
+        margin: $spacing-l;
+        max-width: calc(100% - #{$spacing-l} - #{$spacing-l});
+        padding: $spacing-l;
     }
 }

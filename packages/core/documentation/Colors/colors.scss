@@ -2,8 +2,8 @@
 @import "../../mixins/all";
 
 .jkl-colors__section {
-    padding: $component-spacing--large;
-    margin: $layout-spacing--large 0;
+    padding: $spacing-m;
+    margin: $spacing-2xl 0;
     background-color: $snohvit;
 
     *[data-theme="dark"] & {
@@ -30,8 +30,8 @@
 
     &__text {
         display: block;
-        margin-left: $component-spacing--xxl;
-        margin-right: $component-spacing--xxl;
+        margin-left: $spacing-xl;
+        margin-right: $spacing-xl;
         width: 180px;
     }
 
@@ -76,12 +76,12 @@
         align-items: center;
         @include reset-outline();
         background-color: transparent;
-        margin-top: $component-spacing--large;
-        margin-bottom: $component-spacing--large;
+        margin-top: $spacing-m;
+        margin-bottom: $spacing-m;
 
         @include small-device {
             flex-direction: column;
-            padding-bottom: $layout-spacing--medium;
+            padding-bottom: $spacing-xl;
         }
 
         &:hover {

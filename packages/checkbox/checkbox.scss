@@ -155,7 +155,7 @@ $checkbox-box-default-color--inverted: $svaberg;
         width: $checkbox-box-size;
 
         margin: (($checkbox-height - $checkbox-box-size) * 0.5) 0;
-        margin-right: $component-spacing--small;
+        margin-right: $spacing-xs;
         vertical-align: middle;
         flex-shrink: 0; // Don't allow the check-mark to shrink in case of really long text
 
@@ -205,7 +205,7 @@ $checkbox-box-default-color--inverted: $svaberg;
         display: inline-flex;
 
         &:not(:last-of-type) {
-            margin-right: $component-spacing--xl;
+            margin-right: $spacing-l;
         }
     }
 
@@ -258,7 +258,7 @@ $checkbox-box-default-color--inverted: $svaberg;
             height: $checkbox-box-size--compact;
             width: $checkbox-box-size--compact;
             margin: (($checkbox-height--compact - $checkbox-box-size--compact) * 0.5) 0;
-            margin-right: $component-spacing--small;
+            margin-right: $spacing-xs;
         }
         .jkl-checkbox__check-text {
             margin: (($checkbox-height--compact - $checkbox-line-height--compact) * 0.5) 0;
@@ -273,7 +273,7 @@ $checkbox-box-default-color--inverted: $svaberg;
             height: $checkbox-box-size--compact;
             width: $checkbox-box-size--compact;
             margin: (($checkbox-height--compact - $checkbox-box-size--compact) * 0.5) 0;
-            margin-right: $component-spacing--small;
+            margin-right: $spacing-xs;
         }
         .jkl-checkbox__check-text {
             margin: (($checkbox-height--compact - $checkbox-line-height--compact) * 0.5) 0;

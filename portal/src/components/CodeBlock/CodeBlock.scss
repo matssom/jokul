@@ -23,13 +23,13 @@
     background-color: var(--code-block-bg-color);
     border-radius: rem(2px);
     width: 100%;
-    padding: $component-spacing--medium;
-    width: calc(100% - #{$layout-spacing--xxl});
+    padding: $spacing-s;
+    width: calc(100% - #{$spacing-4xl});
     max-width: 50vw;
     min-width: rem(600px);
 
     @include small-device {
-        width: calc(100% - #{$layout-spacing--medium});
+        width: calc(100% - #{$spacing-xl});
         max-width: 100%;
         min-width: initial;
     }
@@ -38,7 +38,7 @@
         position: absolute;
         top: 0;
         right: 0;
-        padding: $component-spacing--small;
+        padding: $spacing-xs;
         background-color: var(--language-tag-bg-color);
         color: $snohvit;
         @include jkl.text-style("small");
@@ -48,7 +48,7 @@
 
     &__code {
         display: block;
-        padding: $component-spacing--xl $component-spacing--large;
+        padding: $spacing-l $spacing-m;
         overflow-x: scroll;
     }
 

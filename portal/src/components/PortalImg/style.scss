@@ -7,7 +7,7 @@
     cursor: pointer;
     display: block;
     padding: 0;
-    margin-top: $layout-spacing--medium;
+    margin-top: $spacing-xl;
     width: 100%;
 
     &:focus {
@@ -53,12 +53,12 @@
             align-items: center;
             color: $snohvit;
             background-color: $granitt;
-            padding: $component-spacing--small;
+            padding: $spacing-xs;
             border-bottom-left-radius: 4px;
             border-bottom-right-radius: 4px;
 
             & > svg {
-                margin-left: $component-spacing--large;
+                margin-left: $spacing-m;
                 @include keyboard-navigation {
                     box-shadow: 0 0 0 2px $svaberg;
                 }
@@ -78,7 +78,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    padding: $layout-spacing--large;
+    padding: $spacing-2xl;
     background-color: rgba(0, 0, 0, 0.7);
     z-index: $z-index--modal;
     display: block;

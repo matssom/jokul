@@ -14,7 +14,7 @@
 
 .lorem-text {
     @include jkl.text-style("body");
-    margin-top: $layout-spacing--small;
+    margin-top: $spacing-l;
     padding: 1rem;
     background-color: $varde;
     border-radius: rem(4px);
@@ -40,7 +40,7 @@
         @include jkl.text-style("body");
 
         & > * + * {
-            margin-top: $layout-spacing--small;
+            margin-top: $spacing-l;
         }
     }
 }

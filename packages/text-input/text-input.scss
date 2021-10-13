@@ -9,7 +9,7 @@
 $text-input-height: rem(48px);
 $text-input-height--compact: rem(40px);
 $text-input-button-width: rem(48px);
-$text-input-padding: $component-spacing--small $component-spacing--medium;
+$text-input-padding: $spacing-xs $spacing-s;
 
 // These are used to calculate textarea height,
 // and MUST equal the line height in the text style used
@@ -173,7 +173,7 @@ $text-input-selected-error-color--inverted: transparentize($text-input-error-col
         background-color: transparent;
         cursor: pointer;
         padding: 0;
-        padding: $component-spacing--small 0;
+        padding: $spacing-xs 0;
         height: $text-input-button-width;
         width: $text-input-height;
         margin-left: rem(-48px);
@@ -335,7 +335,7 @@ $text-input-selected-error-color--inverted: transparentize($text-input-error-col
 
             transition-property: height;
 
-            &:focus-within  {
+            &:focus-within  {
                 background: var(--text-input-background-color);
             }
         }
@@ -411,12 +411,12 @@ $text-input-selected-error-color--inverted: transparentize($text-input-error-col
     .jkl-text-input__input--#{$num}-rows:not(:placeholder-shown),
     .jkl-text-area--start-open .jkl-text-input__input--#{$num}-rows {
         max-height: 100%;
-        height: $text-input-line-height * $num + $component-spacing--small * 2;
+        height: $text-input-line-height * $num + $spacing-xs * 2;
         @include small-device {
-            height: $text-input-line-height--compact * $num + $component-spacing--small * 2;
+            height: $text-input-line-height--compact * $num + $spacing-xs * 2;
         }
         .jkl-text-input--compact & {
-            height: $text-input-line-height--compact * $num + $component-spacing--small * 2;
+            height: $text-input-line-height--compact * $num + $spacing-xs * 2;
         }
     }
 }

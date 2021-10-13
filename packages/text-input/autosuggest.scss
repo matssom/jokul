@@ -2,7 +2,7 @@
 @import "~@fremtind/jkl-core/mixins/_all.scss";
 @import "~@fremtind/jkl-core/_functions.scss";
 
-$controller-button-padding: $component-spacing--medium;
+$controller-button-padding: $spacing-s;
 
 $item-height: rem(28px);
 $item-font-size: rem(18px);
@@ -15,12 +15,12 @@ $item-font-size: rem(18px);
         position: relative;
         & > input {
             width: 100%;
-            padding-right: $component-spacing--xxl; // to accomodate button
+            padding-right: $spacing-xl; // to accomodate button
         }
     }
 
     &__no-hits-message {
-        margin-bottom: $component-spacing--large;
+        margin-bottom: $spacing-m;
     }
 
     &__controller-button {
@@ -69,7 +69,7 @@ $item-font-size: rem(18px);
         display: block;
         line-height: $item-height;
         font-size: $item-font-size;
-        margin-bottom: $component-spacing--large;
+        margin-bottom: $spacing-m;
 
         &--active {
             @include no-grow-bold();

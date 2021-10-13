@@ -12,7 +12,7 @@
     text-align: left;
     display: flex;
     flex-direction: column;
-    padding: $component-spacing--large;
+    padding: $spacing-m;
     margin: 0;
     transition: box-shadow 0.25s ease-out;
     box-shadow: 0px 10px 25px rgba(0, 0, 0, 0);
@@ -24,7 +24,7 @@
 
     &__heading {
         @include jkl.text-style("heading-3");
-        margin-bottom: $component-spacing--medium;
+        margin-bottom: $spacing-s;
     }
 
     &__content {
@@ -42,7 +42,7 @@
         box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
 
         .jkl-portal-card__arrow {
-            padding-left: $spacing-4;
+            padding-left: $spacing-s;
         }
     }
 }

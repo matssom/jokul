@@ -27,7 +27,7 @@ $label-error-color--inverted: jkl.$color-feil--darkbg;
 .jkl-form-support-label {
     @include jkl.text-style("small");
     display: block;
-    margin-top: $component-spacing--small;
+    margin-top: $spacing-xs;
     color: $label-support-color;
     color: var(--label-support-color);
 
@@ -49,12 +49,12 @@ $label-error-color--inverted: jkl.$color-feil--darkbg;
     }
 }
 
-$label-spacing-large: $component-spacing--large;
-$label-spacing-medium: $component-spacing--small;
-$label-spacing-small: $component-spacing--xs;
-$label-spacing-large--compact: $component-spacing--medium;
-$label-spacing-medium--compact: $component-spacing--small;
-$label-spacing-small--compact: $component-spacing--xs;
+$label-spacing-large: $spacing-m;
+$label-spacing-medium: $spacing-xs;
+$label-spacing-small: $spacing-2xs;
+$label-spacing-large--compact: $spacing-s;
+$label-spacing-medium--compact: $spacing-xs;
+$label-spacing-small--compact: $spacing-2xs;
 
 .jkl-label {
     display: block;

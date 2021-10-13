@@ -7,12 +7,12 @@
 .jkl-portal-color-description {
     width: 100%;
     max-width: rem(768px);
-    margin-top: $layout-spacing--xl;
+    margin-top: $spacing-3xl;
 
     @include small-device {
         &__title,
         &__swatch {
-            margin-bottom: $layout-spacing--medium;
+            margin-bottom: $spacing-xl;
         }
     }
 
@@ -31,25 +31,25 @@
     max-width: rem(768px);
 
     &__title {
-        margin-top: $layout-spacing--large;
-        margin-bottom: $component-spacing--medium;
+        margin-top: $spacing-2xl;
+        margin-bottom: $spacing-s;
     }
 
     &__info {
-        margin-bottom: $layout-spacing--medium;
+        margin-bottom: $spacing-xl;
     }
 
     &__light-color,
     &__dark-color {
         position: relative;
-        padding: $layout-spacing--large 0;
+        padding: $spacing-2xl 0;
     }
 
     &__light-color:before,
     &__dark-color:before {
         @include jkl.text-style("small");
         position: absolute;
-        top: $component-spacing--medium;
+        top: $spacing-s;
     }
 
     &__light-color {
@@ -74,12 +74,12 @@
 
     @include small-device {
         &__dark-color {
-            margin: 0 -#{$component-spacing--large};
-            padding-left: $component-spacing--large;
-            padding-right: $component-spacing--large;
+            margin: 0 -#{$spacing-m};
+            padding-left: $spacing-m;
+            padding-right: $spacing-m;
 
             &:before {
-                left: $component-spacing--large;
+                left: $spacing-m;
             }
         }
     }
@@ -89,16 +89,16 @@
         grid-template-columns: rem(390px) 1fr 1fr;
 
         &__info-wrapper {
-            padding-right: $layout-spacing--medium;
+            padding-right: $spacing-xl;
         }
 
         &__light-color,
         &__dark-color {
-            padding: $layout-spacing--large $component-spacing--large;
+            padding: $spacing-2xl $spacing-m;
         }
 
         &:nth-of-type(1) {
-            margin-top: $layout-spacing--large;
+            margin-top: $spacing-2xl;
         }
     }
 }

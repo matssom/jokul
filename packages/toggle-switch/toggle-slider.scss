@@ -52,7 +52,7 @@ $jkl-slider-focus-ring-width: rem(2px);
         cursor: pointer;
         background-color: $varde;
         background-color: var(--jkl-slider-bg);
-        padding: $component-spacing--small 0;
+        padding: $spacing-xs 0;
         position: relative;
         border-radius: $jkl-slider-rounded;
         overflow: hidden;

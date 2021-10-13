@@ -35,13 +35,13 @@
         background-color: transparent;
         text-align: left;
         position: absolute;
-        bottom: $component-spacing--xxl;
-        left: $component-spacing--large;
+        bottom: $spacing-xl;
+        left: $spacing-m;
         background-color: var(--hero-bg);
         color: var(--hero-text-color);
         max-width: 900px;
-        margin-right: $component-spacing--xxl;
-        padding: $component-spacing--xxl;
+        margin-right: $spacing-xl;
+        padding: $spacing-xl;
 
         @include motion("standard", "expressive");
         transition-property: box-shadow;

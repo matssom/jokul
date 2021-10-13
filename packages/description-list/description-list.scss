@@ -13,22 +13,22 @@
         margin: 0;
         overflow-wrap: break-word;
         &:not(:first-of-type) {
-            margin-top: var.$component-spacing--small;
+            margin-top: var.$spacing-xs;
         }
     }
 
     .jkl-description-list__detail {
-        margin-left: var.$component-spacing--xl;
+        margin-left: var.$spacing-l;
         grid-column-start: 2;
     }
 
     .jkl-description-list__detail + .jkl-description-list__detail {
-        margin-top: var.$component-spacing--small;
+        margin-top: var.$spacing-xs;
     }
 
     .jkl-description-list__term + .jkl-description-list__detail {
         &:not(:first-of-type) {
-            margin-top: var.$component-spacing--small;
+            margin-top: var.$spacing-xs;
         }
     }
 }
@@ -36,9 +36,9 @@
 .jkl-description-list {
     &__term {
         font-weight: jkl.$typography-weight-bold;
-        margin-bottom: var.$component-spacing--xs;
+        margin-bottom: var.$spacing-2xs;
         &:not(:first-child) {
-            margin-top: var.$component-spacing--medium;
+            margin-top: var.$spacing-s;
         }
     }
 
@@ -47,7 +47,7 @@
     }
 
     &__detail + &__detail {
-        margin-top: var.$component-spacing--xs;
+        margin-top: var.$spacing-2xs;
     }
 
     @include mix.from-medium-device() {

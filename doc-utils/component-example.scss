@@ -13,19 +13,19 @@
 }
 
 .jkl-portal-responsive-example {
-    padding: $component-spacing--medium;
+    padding: $spacing-s;
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
 }
 
 .jkl-portal-code-example {
-    width: calc(100% - #{$layout-spacing--xxl});
+    width: calc(100% - #{$spacing-4xl});
     max-width: 50vw;
     min-width: rem(600px);
 
     @include small-device {
-        width: calc(100% - #{$layout-spacing--medium});
+        width: calc(100% - #{$spacing-xl});
         max-width: 100%;
         min-width: initial;
     }
@@ -34,10 +34,10 @@
 .jkl-portal-component-example {
     box-sizing: border-box;
     background-color: var(--component-example-bg);
-    padding: $component-spacing--medium;
+    padding: $spacing-s;
     display: flex;
     flex-direction: row;
-    width: calc(100% - #{$layout-spacing--xxl});
+    width: calc(100% - #{$spacing-4xl});
     max-width: 50vw;
     min-width: rem(600px);
     min-height: rem(208px);
@@ -50,14 +50,14 @@
         color: var(--jkl-color);
         background-color: var(--jkl-background-color);
         position: relative;
-        padding: $layout-spacing--large $component-spacing--large;
+        padding: $spacing-2xl $spacing-m;
 
         &::before {
             @include jkl.text-style("small");
             color: jkl.$color-fjellgra;
             position: absolute;
-            top: $component-spacing--medium;
-            left: $component-spacing--large;
+            top: $spacing-s;
+            left: $spacing-m;
         }
 
         &:before {
@@ -67,21 +67,21 @@
 
     &__example-options {
         display: block;
-        padding: $component-spacing--medium $component-spacing--xl;
+        padding: $spacing-s $spacing-l;
         min-width: rem(180px);
     }
 
     &__example-options-header {
         &:not(:first-child) {
-            margin-top: $layout-spacing--small;
+            margin-top: $spacing-l;
         }
         @include jkl.text-style("small");
         color: jkl.$color-fjellgra;
-        margin-bottom: $component-spacing--medium;
+        margin-bottom: $spacing-s;
     }
 
     &__choice-option {
-        margin-top: $layout-spacing--small;
+        margin-top: $spacing-l;
 
         & .jkl-label.jkl-label--small {
             @include jkl.text-style("small");
@@ -90,7 +90,7 @@
     }
 
     @include small-device {
-        width: calc(100% - #{$layout-spacing--medium});
+        width: calc(100% - #{$spacing-xl});
         max-width: 100%;
         min-width: initial;
         flex-direction: column;
@@ -99,7 +99,7 @@
         }
         &__example-options {
             padding: 0;
-            padding-top: $component-spacing--medium;
+            padding-top: $spacing-s;
         }
     }
 }

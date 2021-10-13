@@ -6,16 +6,16 @@
 $animation-timing: 300ms ease-out both;
 
 .jkl-portal-sidebar-menu {
-    padding-left: $layout-spacing--medium;
-    padding-top: $layout-spacing--large;
+    padding-left: $spacing-xl;
+    padding-top: $spacing-2xl;
 
     &__filter {
-        margin-bottom: $layout-spacing--medium;
+        margin-bottom: $spacing-xl;
     }
 
     &__meta {
         text-transform: capitalize;
-        margin: $component-spacing--large 0;
+        margin: $spacing-m 0;
         display: grid;
         grid-template-columns: 1fr 1fr;
     }

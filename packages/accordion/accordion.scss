@@ -52,7 +52,7 @@ $arrow-width: rem(13px);
 .jkl-accordion-item {
     @include reset-outline;
 
-    $title-padding: $component-spacing--large;
+    $title-padding: $spacing-m;
 
     &:nth-child(n) {
         border-top: rem(1px) solid $svaberg;
@@ -97,7 +97,7 @@ $arrow-width: rem(13px);
         /* The dropdown arrow */
         &__arrow {
             position: absolute;
-            left: $component-spacing--large;
+            left: $spacing-m;
             top: 50%;
             transform: translateY(-50%);
             color: inherit;
@@ -137,7 +137,7 @@ $arrow-width: rem(13px);
         @include jkl.text-style("body");
         display: block;
         padding-right: 2rem;
-        margin-left: $component-spacing--xl;
+        margin-left: $spacing-l;
     }
 
     &__content-wrapper {
@@ -148,7 +148,7 @@ $arrow-width: rem(13px);
     &__content {
         @include jkl.text-style("body");
         height: auto;
-        padding: $component-spacing--large $component-spacing--xs $component-spacing--xxl $component-spacing--xl;
+        padding: $spacing-m $spacing-2xs $spacing-xl $spacing-l;
         color: inherit; // Make content same color as rest of page text
     }
 }

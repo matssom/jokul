@@ -9,14 +9,14 @@
         width: rem(104px);
         height: rem(104px);
         flex-shrink: 0;
-        margin-right: $layout-spacing--small;
+        margin-right: $spacing-l;
     }
 
     &--vertical {
         flex-direction: column;
 
         .jkl-portal-color-info__swatch {
-            margin-bottom: $layout-spacing--medium;
+            margin-bottom: $spacing-xl;
         }
     }
 }

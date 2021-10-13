@@ -5,8 +5,8 @@
 
 $bottom-border-size: rem(1px);
 $highlight-color: $snohvit;
-$cell-padding: $component-spacing--xl $component-spacing--small;
-$row-end-padding: $component-spacing--large;
+$cell-padding: $spacing-l $spacing-xs;
+$row-end-padding: $spacing-m;
 
 .jkl-table {
     border-collapse: collapse;
@@ -15,7 +15,7 @@ $row-end-padding: $component-spacing--large;
     &__heading {
         color: $stein;
         @include jkl.text-style("small");
-        padding: $component-spacing--small;
+        padding: $spacing-xs;
     }
 
     &__data-cell {

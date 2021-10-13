@@ -23,15 +23,15 @@
     }
 
     &__main {
-        padding: $component-spacing--large;
-        padding-top: $layout-spacing--large;
+        padding: $spacing-m;
+        padding-top: $spacing-2xl;
     }
 
     @include medium-device {
         &__main {
-            padding-top: $layout-spacing--large;
-            padding-right: $layout-spacing--xl;
-            padding-left: $layout-spacing--medium;
+            padding-top: $spacing-2xl;
+            padding-right: $spacing-3xl;
+            padding-left: $spacing-xl;
         }
     }
 
@@ -62,9 +62,9 @@
 
         &__main {
             grid-area: main;
-            padding-top: $layout-spacing--large;
-            padding-right: $layout-spacing--xl;
-            padding-left: $layout-spacing--medium;
+            padding-top: $spacing-2xl;
+            padding-right: $spacing-3xl;
+            padding-left: $spacing-xl;
 
             &--frontpage {
                 grid-column: sidebar / span 2;

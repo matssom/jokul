@@ -10,8 +10,8 @@ const BrowserPreferencesExample: VFC = () => {
     const { prefersReducedMotion, prefersColorScheme } = useContext(ScreenContext);
 
     return (
-        <section className="hooks-example key-listener-example jkl-spacing--bottom-3">
-            <h2 className="jkl-h2 jkl-spacing--bottom-2">Preferanser fra nettleseren din</h2>
+        <section className="hooks-example key-listener-example jkl-spacing-xs--bottom">
+            <h2 className="jkl-h2 jkl-spacing-2xs--bottom">Preferanser fra nettleseren din</h2>
             <dl>
                 <dt>Redusert bevegelse</dt>
                 <dd>{prefersReducedMotion ? "Ja" : "Ingen preferanse"}</dd>

@@ -30,7 +30,7 @@
         height: 100%;
         color: inherit;
         &:not(:last-child) {
-            margin-right: $component-spacing--xxl;
+            margin-right: $spacing-xl;
         }
     }
 
@@ -84,13 +84,13 @@
 
     &__menu-wrapper {
         box-sizing: border-box;
-        padding: 15vh $layout-spacing--small 0 $layout-spacing--large;
+        padding: 15vh $spacing-l 0 $spacing-2xl;
         height: 100vh;
         max-height: 100vh;
         width: 100vw;
 
         @include from-medium-device {
-            padding: 25vh $layout-spacing--xl 15vh;
+            padding: 25vh $spacing-3xl 15vh;
         }
     }
 

@@ -67,8 +67,8 @@ $datepicker-focus-color--inverted: $snohvit;
 
 $date-width: rem(40px);
 $date-spacing: rem(4px);
-$calendar-padding: $component-spacing--xl;
-$calendar-padding--compact: $component-spacing--small;
+$calendar-padding: $spacing-l;
+$calendar-padding--compact: $spacing-xs;
 $calendar-width: ($date-width * 7) + ($date-spacing * 6) + ($calendar-padding * 2);
 
 // Theme colors:
@@ -256,12 +256,12 @@ $calendar-selected-date-background-color--inverted: $snohvit;
         display: flex;
         justify-content: center;
         align-content: center;
-        margin-bottom: $component-spacing--xl;
+        margin-bottom: $spacing-l;
     }
 
     &__year-selector {
         max-width: 30%;
-        margin-right: $component-spacing--xxl;
+        margin-right: $spacing-xl;
     }
 
     &__month-selector {
@@ -278,7 +278,7 @@ $calendar-selected-date-background-color--inverted: $snohvit;
 
     caption {
         @include jkl.text-style("body/large-screen");
-        margin-bottom: $component-spacing--xl;
+        margin-bottom: $spacing-l;
         text-transform: capitalize;
     }
 
@@ -287,7 +287,7 @@ $calendar-selected-date-background-color--inverted: $snohvit;
 
     th {
         @include jkl.text-style("small/large-screen");
-        padding-bottom: $component-spacing--small;
+        padding-bottom: $spacing-xs;
     }
 
     /// Calendar table styles
@@ -325,7 +325,7 @@ $calendar-selected-date-background-color--inverted: $snohvit;
             line-height: rem(40px);
         }
         padding: 0;
-        padding-top: $component-spacing--xxs; // adjust visual alignment of text
+        padding-top: $spacing-3xs; // adjust visual alignment of text
         @include motion("entrance", "energetic");
         transition-property: color, background-color, box-shadow;
 

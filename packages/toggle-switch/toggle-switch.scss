@@ -50,7 +50,7 @@ $expanding-pill-background-color--inverted: $fjellgra;
     @include jkl.text-style("body/large-screen");
 
     &__help-label {
-        margin-top: $component-spacing--medium;
+        margin-top: $spacing-s;
     }
 
     &__slider {
@@ -59,7 +59,7 @@ $expanding-pill-background-color--inverted: $fjellgra;
         height: $toggle-height;
         position: relative;
         width: $toggle-width;
-        margin-right: $component-spacing--small;
+        margin-right: $spacing-xs;
         pointer-events: none;
 
         /* The line the dot slides on */

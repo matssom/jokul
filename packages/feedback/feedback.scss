@@ -39,7 +39,7 @@ $max-feedback-input-width: 30rem;
         @include jkl.text-style("body");
         color: jkl.$color-stein;
         color: var(--jkl-feedback--step-color);
-        margin-bottom: $layout-spacing--xs;
+        margin-bottom: $spacing-m;
     }
 
     &__fade-in {

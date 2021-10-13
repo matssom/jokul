@@ -3,13 +3,13 @@
 
 .jkl-portal-frontpage {
     section {
-        margin-bottom: $spacing-9;
+        margin-bottom: $spacing-3xl;
     }
 
     &__section {
         &-intro {
             h2 {
-                margin-bottom: $spacing-9;
+                margin-bottom: $spacing-3xl;
             }
 
             &--image-container {
@@ -33,10 +33,10 @@
 
             &--content {
                 display: flex;
-                margin-left: -$layout-spacing--medium;
+                margin-left: -$spacing-xl;
 
                 .jkl-portal__card-list {
-                    margin-left: $spacing-9;
+                    margin-left: $spacing-3xl;
 
                     a {
                         text-decoration: none;
@@ -58,13 +58,13 @@
                 &--content {
                     position: relative;
                     display: block;
-                    margin-left: -$component-spacing--large;
+                    margin-left: -$spacing-m;
 
                     .jkl-portal__card-list {
                         position: relative;
                         display: block;
-                        margin-left: $component-spacing--large;
-                        padding-top: $layout-spacing--large;
+                        margin-left: $spacing-m;
+                        padding-top: $spacing-2xl;
                     }
                 }
             }
@@ -75,13 +75,13 @@
         }
 
         &-contribute {
-            margin-left: $layout-spacing--large;
+            margin-left: $spacing-2xl;
 
             h2 {
-                padding-bottom: $layout-spacing--large;
+                padding-bottom: $spacing-2xl;
             }
             p {
-                padding-bottom: $layout-spacing--small;
+                padding-bottom: $spacing-l;
             }
         }
 
@@ -94,7 +94,7 @@
                 "diamond principle";
 
             &__principle {
-                margin-bottom: $spacing-10;
+                margin-bottom: $spacing-4xl;
                 height: 90vh;
                 display: flex;
                 align-items: center;
@@ -102,7 +102,7 @@
                 &--container {
                     grid-area: principle;
                     h1 {
-                        margin-bottom: $component-spacing--xl;
+                        margin-bottom: $spacing-l;
                     }
                 }
 
@@ -116,13 +116,13 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                margin-bottom: $spacing-9;
+                margin-bottom: $spacing-3xl;
             }
 
             &--heading {
                 grid-area: heading;
                 max-width: 28ch;
-                margin-bottom: calc(#{$spacing-10}* 1.5);
+                margin-bottom: calc(#{$spacing-4xl}* 1.5);
             }
         }
     }

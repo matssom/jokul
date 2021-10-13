@@ -9,9 +9,9 @@ $header-bg-color--inverted: $granitt;
 $header-height: rem(96px);
 $header-height--collapsed: rem(64px);
 $header-height--mobile: rem(64px);
-$header-padding: 0 $layout-spacing--medium;
-$header-padding--right: $layout-spacing--xl;
-$header-padding--mobile: 0 $component-spacing--large;
+$header-padding: 0 $spacing-xl;
+$header-padding--right: $spacing-3xl;
+$header-padding--mobile: 0 $spacing-m;
 
 .jkl-portal-header {
     display: flex;

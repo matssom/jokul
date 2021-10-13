@@ -19,13 +19,13 @@
 .jkl-portal-do-dont-example {
     display: inline-block;
     background-color: var(--do-dont-example-bg);
-    padding: $component-spacing--medium;
-    padding-bottom: $component-spacing--large;
-    margin-bottom: $layout-spacing--large;
+    padding: $spacing-s;
+    padding-bottom: $spacing-m;
+    margin-bottom: $spacing-2xl;
     width: 100%;
 
     &:not(:last-of-type) {
-        margin-right: $layout-spacing--medium;
+        margin-right: $spacing-xl;
     }
 
     &--fullwidth {
@@ -42,8 +42,8 @@
 
     &__heading {
         @include jkl.text-style("heading-4");
-        margin-top: $component-spacing--large;
-        margin-bottom: $component-spacing--xs;
+        margin-top: $spacing-m;
+        margin-bottom: $spacing-2xs;
 
         &--do {
             color: var(--do-dont-example-do-color);

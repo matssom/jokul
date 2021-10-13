@@ -6,11 +6,11 @@
 .jkl-mixin-example-table {
     border: 0;
     width: 100%;
-    margin-top: $layout-spacing--medium;
+    margin-top: $spacing-xl;
 
     &__data,
     &__header {
-        padding: $component-spacing--small;
+        padding: $spacing-xs;
         @include jkl.text-style("body");
         text-align: left;
         vertical-align: top;
@@ -26,7 +26,7 @@
 
     &__data {
         border-bottom-color: jkl.$color-stein;
-        padding-bottom: $component-spacing--large;
+        padding-bottom: $spacing-m;
         min-height: rem(64px);
     }
 }

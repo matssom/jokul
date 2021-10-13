@@ -15,7 +15,7 @@
 .jkl-portal-media-box {
     max-width: 900px;
     position: relative;
-    margin-bottom: $layout-spacing--xxl;
+    margin-bottom: $spacing-4xl;
 
     &__video {
         width: 100%;
@@ -36,21 +36,21 @@
     }
 
     &__caption {
-        margin-top: $component-spacing--small;
+        margin-top: $spacing-xs;
     }
 
     &__card {
         position: absolute;
-        bottom: $layout-spacing--xl;
-        left: $component-spacing--large;
+        bottom: $spacing-3xl;
+        left: $spacing-m;
         background-color: var(--media-bg);
         color: var(--media-text-color);
         max-width: 500px;
-        padding: $component-spacing--xxl;
+        padding: $spacing-xl;
         z-index: 1;
 
         &--long-text {
-            bottom: -$layout-spacing--xl;
+            bottom: -$spacing-3xl;
         }
     }
 
@@ -60,7 +60,7 @@
             margin-right: 30%;
         }
         .jkl-portal-media-box__card {
-            right: $component-spacing--large;
+            right: $spacing-m;
             left: initial;
         }
     }

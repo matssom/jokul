@@ -6,7 +6,7 @@
 
     & > *:not(:last-child) {
         margin: 0;
-        margin-right: $layout-spacing--medium;
+        margin-right: $spacing-xl;
     }
 
     &--vertical {
@@ -14,7 +14,7 @@
 
         & > *:not(:last-child) {
             margin: 0;
-            margin-bottom: $layout-spacing--medium;
+            margin-bottom: $spacing-xl;
         }
     }
 }

@@ -19,7 +19,7 @@ const MutationObserverExample: VFC = () => {
     return (
         <section>
             <button
-                className="jkl-button jkl-button--secondary jkl-spacing--right-1"
+                className="jkl-button jkl-button--secondary jkl-spacing-3xs--left"
                 onClick={() => setIsOpen(!isOpen)}
             >
                 Endre status
@@ -27,7 +27,7 @@ const MutationObserverExample: VFC = () => {
             <button className="jkl-button jkl-button--tertiary" onClick={() => appendToMutationList([])}>
                 Nullstill liste
             </button>
-            <p ref={mutationTargetRef} className="jkl-spacing--top-1 jkl-body">
+            <p ref={mutationTargetRef} className="jkl-spacing-3xs--top jkl-body">
                 Nåværende status: <strong>{isOpen ? "Åpen" : "Lukket"}</strong>
                 <br />
                 Liste over endringer:

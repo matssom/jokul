@@ -36,7 +36,9 @@ const HouseDetailsForm: React.FC<Props> = ({ onSubmit }) => {
                 onChange={(e) => setHouseType(e.target.value)}
                 selectedValue={houseType}
                 className={
-                    isCompact ? "jkl-spacing--bottom-1 jkl-spacing--top-2" : "jkl-spacing--bottom-2 jkl-spacing--top-3"
+                    isCompact
+                        ? "jkl-spacing-3xs--bottom jkl-spacing-2xs--top"
+                        : "jkl-spacing-2xs--bottom jkl-spacing-xs--top"
                 }
                 variant="large"
             />
@@ -47,7 +49,7 @@ const HouseDetailsForm: React.FC<Props> = ({ onSubmit }) => {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
-                        className={isCompact ? "jkl-spacing--bottom-1" : "jkl-spacing--bottom-2"}
+                        className={isCompact ? "jkl-spacing-3xs--bottom" : "jkl-spacing-2xs--bottom"}
                     >
                         <ErrorMessage title="Vi forsikrer ikke eneboliger">
                             Fordi vi ville vise en alternativ sti her så har vi lagt inn denne tulleregelen. Kontakt
@@ -60,7 +62,7 @@ const HouseDetailsForm: React.FC<Props> = ({ onSubmit }) => {
                 <PrimaryButton
                     forceCompact={isCompact}
                     inverted={darkMode}
-                    className={isCompact ? "jkl-spacing--bottom-1" : "jkl-spacing--bottom-2"}
+                    className={isCompact ? "jkl-spacing-3xs--bottom" : "jkl-spacing-2xs--bottom"}
                 >
                     Gå videre
                 </PrimaryButton>
