@@ -13,5 +13,5 @@ function yes_or_no {
 
 until yarn commitlint --edit $1; do
   echo ""
-  exec < /dev/tty && yes_or_no "Edit and retry?" && vi $1 || true
+  exec < /dev/tty && yes_or_no "Edit and retry?" && $EDITOR $1 || true
 done
