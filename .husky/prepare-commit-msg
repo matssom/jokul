@@ -1,4 +1,27 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-exec < /dev/tty && node_modules/.bin/cz --hook || true
+COMMIT_MSG_FILE=$1
+COMMIT_SOURCE=$2
+SHA1=$3
+
+if [ "${COMMIT_SOURCE}" = merge ]
+then
+    exit 0
+fi
+
+if [ "${COMMIT_SOURCE}" = squash ]
+then
+    exit 0
+fi
+
+# Hvis SHA1 er satt indikerer det at vi ikke lager en ny commit, men f. eks. er i en amend.
+# Da antar vi at det skal hoppes rett til editor
+if [ -z "${SHA1}" ]
+then
+    # sha1 er tom, kjør commitizen
+    exec < /dev/tty && node_modules/.bin/cz --hook || true
+else
+    # sha1 er ikke tom, hopp over commitizen
+    exit 0
+fi
