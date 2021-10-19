@@ -1,6 +1,5 @@
 @use "~@fremtind/jkl-core/jkl";
 
-@import "~@fremtind/jkl-core/variables/all";
 @import "~@fremtind/jkl-core/functions";
 
 @include jkl.helper-light-mode-variables {
@@ -20,7 +19,7 @@
     @include jkl.text-style("body");
 
     &:not(:last-child) {
-        margin-bottom: $spacing-l;
+        margin-bottom: jkl.$spacing-l;
     }
 }
 
@@ -30,13 +29,13 @@
     @include jkl.text-style("heading-2");
 
     &:not(:last-child) {
-        margin-bottom: $spacing-2xl;
+        margin-bottom: jkl.$spacing-2xl;
     }
 }
 
 .jkl-portal-page-title {
     max-width: rem(850px);
-    margin-bottom: $spacing-xl;
+    margin-bottom: jkl.$spacing-xl;
 
     @include jkl.text-style("title");
 }
@@ -45,40 +44,40 @@
     @include jkl.text-style("heading-1");
 
     &:not(:first-child) {
-        margin-top: $spacing-2xl;
+        margin-top: jkl.$spacing-2xl;
     }
     &:not(:last-child) {
-        margin-bottom: $spacing-l;
+        margin-bottom: jkl.$spacing-l;
     }
 }
 .jkl-portal-heading-medium {
     @include jkl.text-style("heading-3");
 
     &:not(:first-child) {
-        margin-top: $spacing-xl;
+        margin-top: jkl.$spacing-xl;
     }
     &:not(:last-child) {
-        margin-bottom: $spacing-s;
+        margin-bottom: jkl.$spacing-s;
     }
 }
 .jkl-portal-heading-small {
     @include jkl.text-style("heading-4");
 
     &:not(:first-child) {
-        margin-top: $spacing-xl;
+        margin-top: jkl.$spacing-xl;
     }
     &:not(:last-child) {
-        margin-bottom: $spacing-xs;
+        margin-bottom: jkl.$spacing-xs;
     }
 }
 .jkl-portal-heading-xs {
     @include jkl.text-style("heading-5");
 
     &:not(:first-child) {
-        margin-top: $spacing-l;
+        margin-top: jkl.$spacing-l;
     }
     &:not(:last-child) {
-        margin-bottom: $spacing-xs;
+        margin-bottom: jkl.$spacing-xs;
     }
 }
 
@@ -86,6 +85,6 @@
     display: inline-block;
     background-color: var(--inline-code-bg-color);
     font-size: 0.8em;
-    padding: 0 $spacing-xs;
+    padding: 0 jkl.$spacing-xs;
     border-radius: rem(2px);
 }

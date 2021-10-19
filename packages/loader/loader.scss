@@ -1,15 +1,14 @@
 @use "~@fremtind/jkl-core/jkl";
 
-@import "~@fremtind/jkl-core/variables/_all.scss";
 @import "~@fremtind/jkl-core/_functions.scss";
 
 $loader-dot-size--large: rem(18px);
 $loader-dot-size--medium: rem(7px);
 $loader-dot-size--small: rem(5px);
 
-$loader-spacing--large: $spacing-xl;
-$loader-spacing--medium: $spacing-s;
-$loader-spacing--small: $spacing-xs;
+$loader-spacing--large: jkl.$spacing-xl;
+$loader-spacing--medium: jkl.$spacing-s;
+$loader-spacing--small: jkl.$spacing-xs;
 
 $loader-animation-properties: 2500ms linear infinite;
 

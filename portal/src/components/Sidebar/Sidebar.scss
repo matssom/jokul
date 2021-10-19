@@ -1,21 +1,20 @@
 @use "~@fremtind/jkl-core/jkl";
 
-@import "~@fremtind/jkl-core/variables/_all.scss";
 @import "~@fremtind/jkl-core/mixins/_all.scss";
 
 $animation-timing: 300ms ease-out both;
 
 .jkl-portal-sidebar-menu {
-    padding-left: $spacing-xl;
-    padding-top: $spacing-2xl;
+    padding-left: jkl.$spacing-xl;
+    padding-top: jkl.$spacing-2xl;
 
     &__filter {
-        margin-bottom: $spacing-xl;
+        margin-bottom: jkl.$spacing-xl;
     }
 
     &__meta {
         text-transform: capitalize;
-        margin: $spacing-m 0;
+        margin: jkl.$spacing-m 0;
         display: grid;
         grid-template-columns: 1fr 1fr;
     }

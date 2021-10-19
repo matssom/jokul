@@ -1,15 +1,16 @@
-@import "~@fremtind/jkl-core/variables/_all.scss";
+@use "~@fremtind/jkl-core/jkl";
+
 @import "~@fremtind/jkl-core/mixins/_all.scss";
 
 .jkl-portal-frontpage {
     section {
-        margin-bottom: $spacing-3xl;
+        margin-bottom: jkl.$spacing-3xl;
     }
 
     &__section {
         &-intro {
             h2 {
-                margin-bottom: $spacing-3xl;
+                margin-bottom: jkl.$spacing-3xl;
             }
 
             &--image-container {
@@ -33,14 +34,14 @@
 
             &--content {
                 display: flex;
-                margin-left: -$spacing-xl;
+                margin-left: -#{jkl.$spacing-xl};
 
                 .jkl-portal__card-list {
-                    margin-left: $spacing-3xl;
+                    margin-left: jkl.$spacing-3xl;
 
                     a {
                         text-decoration: none;
-                        color: $granitt;
+                        color: jkl.$color-granitt;
                     }
                 }
             }
@@ -58,13 +59,13 @@
                 &--content {
                     position: relative;
                     display: block;
-                    margin-left: -$spacing-m;
+                    margin-left: -#{jkl.$spacing-m};
 
                     .jkl-portal__card-list {
                         position: relative;
                         display: block;
-                        margin-left: $spacing-m;
-                        padding-top: $spacing-2xl;
+                        margin-left: jkl.$spacing-m;
+                        padding-top: jkl.$spacing-2xl;
                     }
                 }
             }
@@ -75,13 +76,13 @@
         }
 
         &-contribute {
-            margin-left: $spacing-2xl;
+            margin-left: jkl.$spacing-2xl;
 
             h2 {
-                padding-bottom: $spacing-2xl;
+                padding-bottom: jkl.$spacing-2xl;
             }
             p {
-                padding-bottom: $spacing-l;
+                padding-bottom: jkl.$spacing-l;
             }
         }
 
@@ -94,7 +95,7 @@
                 "diamond principle";
 
             &__principle {
-                margin-bottom: $spacing-4xl;
+                margin-bottom: jkl.$spacing-4xl;
                 height: 90vh;
                 display: flex;
                 align-items: center;
@@ -102,7 +103,7 @@
                 &--container {
                     grid-area: principle;
                     h1 {
-                        margin-bottom: $spacing-l;
+                        margin-bottom: jkl.$spacing-l;
                     }
                 }
 
@@ -116,13 +117,13 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                margin-bottom: $spacing-3xl;
+                margin-bottom: jkl.$spacing-3xl;
             }
 
             &--heading {
                 grid-area: heading;
                 max-width: 28ch;
-                margin-bottom: calc(#{$spacing-4xl}* 1.5);
+                margin-bottom: calc(#{jkl.$spacing-4xl}* 1.5);
             }
         }
     }

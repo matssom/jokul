@@ -13,13 +13,13 @@ import { SpacingScaleTable } from "./Spacing/Spacing";
 
 I Jøkul har vi en spacing-skala som er basert på t-skjorte størrelser. Du kan bruke skalaene ved hjelp av SASS-variabler som du kan sette inn i ditt eget stilark, eller bruke hjelpeklassene direkte på elementer i koden.
 
-Variablene importerer du fra `@fremtind/jkl-core/variables/_spacing.scss`. Husk å bruke riktig importsyntaks for byggverktøyet ditt når du importerer. De kan da brukes slik:
+Variablene kan importeres fra `~@fremtind/jkl-core/jkl` med @use syntaksen. Husk å bruke riktig importsyntaks for byggverktøyet ditt når du importerer. De kan da brukes slik:
 
 ```scss
-@import "~@fremtind/jkl-core/variables/_spacing.scss";
+@use "~@fremtind/jkl-core/jkl";
 
 .jkl-your-component {
-    padding-left: $spacing-s;
+    padding-left: jkl.$spacing-s;
 }
 ```
 

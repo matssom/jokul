@@ -1,6 +1,5 @@
 @use "~@fremtind/jkl-core/jkl";
 
-@import "~@fremtind/jkl-core/variables/_all.scss";
 @import "~@fremtind/jkl-core/mixins/_all.scss";
 @import "~@fremtind/jkl-core/functions";
 
@@ -35,22 +34,22 @@
     }
 
     article {
-        margin-bottom: $spacing-3xl;
+        margin-bottom: jkl.$spacing-3xl;
     }
 
     .uu__filter-search {
-        margin-top: $spacing-2xl;
+        margin-top: jkl.$spacing-2xl;
     }
 
     .uu__section--search {
         position: relative;
         z-index: 0;
-        margin-top: $spacing-2xl;
-        padding-top: $spacing-xl;
-        padding-bottom: $spacing-3xl;
+        margin-top: jkl.$spacing-2xl;
+        padding-top: jkl.$spacing-xl;
+        padding-bottom: jkl.$spacing-3xl;
 
         & > *:not(:first-child) {
-            margin-top: $spacing-l;
+            margin-top: jkl.$spacing-l;
         }
 
         &::before {
@@ -61,35 +60,35 @@
             height: 100%;
             width: 100%;
             background-color: var(--search-background);
-            padding-right: $spacing-m;
-            margin-left: -#{$spacing-m};
-            padding-left: $spacing-m;
+            padding-right: jkl.$spacing-m;
+            margin-left: -#{jkl.$spacing-m};
+            padding-left: jkl.$spacing-m;
 
             @include medium-device {
-                padding-right: $spacing-3xl;
-                margin-left: -#{$spacing-xl};
-                padding-left: $spacing-xl;
+                padding-right: jkl.$spacing-3xl;
+                margin-left: -#{jkl.$spacing-xl};
+                padding-left: jkl.$spacing-xl;
             }
 
             @include from-large-device {
-                padding-right: $spacing-3xl;
+                padding-right: jkl.$spacing-3xl;
 
                 // 415px is the width of the sidebar
-                margin-left: calc(-#{$spacing-xl} - 415px);
-                padding-left: calc(#{$spacing-xl} + 415px);
+                margin-left: calc(-#{jkl.$spacing-xl} - 415px);
+                padding-left: calc(#{jkl.$spacing-xl} + 415px);
             }
         }
     }
 
     .uu__section--search-results {
         h2 {
-            margin-top: $spacing-2xl;
+            margin-top: jkl.$spacing-2xl;
         }
     }
 
     .uu-article {
         &:first-of-type {
-            margin-top: $spacing-3xl;
+            margin-top: jkl.$spacing-3xl;
         }
 
         &__header {
@@ -98,10 +97,10 @@
                 flex-wrap: wrap;
                 list-style: none;
                 padding-inline-start: 0;
-                margin-block-start: $spacing-xs;
-                column-gap: $spacing-xs;
-                row-gap: $spacing-xs;
-                margin-bottom: $spacing-l;
+                margin-block-start: jkl.$spacing-xs;
+                column-gap: jkl.$spacing-xs;
+                row-gap: jkl.$spacing-xs;
+                margin-bottom: jkl.$spacing-l;
                 max-width: rem(750px);
             }
 
@@ -113,9 +112,9 @@
                 align-items: center;
                 justify-content: center;
                 border-radius: 100px;
-                padding: $spacing-2xs $spacing-xs $spacing-3xs $spacing-xs;
-                background-color: $sand;
-                color: $fjellgra;
+                padding: jkl.$spacing-2xs jkl.$spacing-xs jkl.$spacing-3xs jkl.$spacing-xs;
+                background-color: jkl.$color-sand;
+                color: jkl.$color-fjellgra;
             }
         }
 
@@ -124,8 +123,8 @@
             flex-direction: column;
             list-style: none;
             padding-inline-start: 0;
-            column-gap: $spacing-m;
-            row-gap: $spacing-l;
+            column-gap: jkl.$spacing-m;
+            row-gap: jkl.$spacing-l;
             max-width: rem(750px);
 
             &--wcag {
