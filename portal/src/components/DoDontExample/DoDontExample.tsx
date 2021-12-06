@@ -35,7 +35,9 @@ export const DoDontExample: React.FC<Props> = ({ type, content, image = "", vide
                     <ExampleVideo videoUrl={video} />
                 </div>
             )}
-            <p className="jkl-portal-do-dont-example__heading">{heading}</p>
+            <p className={cx("jkl-portal-do-dont-example__heading", `jkl-portal-do-dont-example__heading--${type}`)}>
+                {heading}
+            </p>
             <p className="jkl-portal-do-dont-example__description">{description}</p>
         </section>
     );

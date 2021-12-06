@@ -3,6 +3,8 @@
 @import "~@fremtind/jkl-core/mixins/_all.scss";
 @import "~@fremtind/jkl-core/functions";
 
+@import "~@fremtind/jkl-list/list";
+
 @include jkl.helper-light-mode-variables {
     --do-dont-example-bg: #{jkl.$color-dis};
     --do-dont-example-do-color: #{jkl.$color-suksess};
@@ -50,6 +52,32 @@
 
         margin-top: jkl.$spacing-m;
         margin-bottom: jkl.$spacing-2xs;
+
+        position: relative;
+        padding-left: jkl.$spacing-l;
+
+        &::before {
+            text-indent: -9999px;
+            position: absolute;
+            top: jkl.$spacing-3xs;
+            left: -#{jkl.$spacing-3xs};
+            background-size: contain;
+            display: inline-block;
+            width: 1em;
+            height: 1em;
+        }
+
+        &--do::before {
+            content: "\2713";
+            background-image: check($list-check-color, $list-text-color--inverted);
+            background-image: var(--jkl-list-marker--check);
+        }
+
+        &--dont::before {
+            content: "\274C";
+            background-image: cross($list-cross-color);
+            background-image: var(--jkl-list-marker--cross);
+        }
     }
 
     &__description {
