@@ -78,7 +78,7 @@ $link-active-color--inverted: jkl.$color-snohvit;
     in a new window or tab: */
     &[target="_blank"],
     &--external {
-        &:after {
+        &::after {
             content: $north-east-arrow;
         }
     }
@@ -94,7 +94,7 @@ $link-active-color--inverted: jkl.$color-snohvit;
     position: relative;
     padding-right: 1.2em;
 
-    &:after {
+    &::after {
         position: absolute;
         content: $right-arrow;
         padding-left: rem(2px);
@@ -106,7 +106,7 @@ $link-active-color--inverted: jkl.$color-snohvit;
     &:hover:not(:focus) {
         color: var(--link-hover-color);
 
-        &:after {
+        &::after {
             transform: translateX(33%);
         }
     }
@@ -115,7 +115,7 @@ $link-active-color--inverted: jkl.$color-snohvit;
         @include border-gradient(var(--link-color));
         @include no-grow-bold;
 
-        &:after {
+        &::after {
             transform: translateX(33%);
         }
     }
@@ -129,11 +129,11 @@ $link-active-color--inverted: jkl.$color-snohvit;
     padding-right: 0;
     padding-left: 1em;
 
-    &:after {
+    &::after {
         display: none;
     }
 
-    &:before {
+    &::before {
         position: absolute;
         left: 0;
         top: 0;
@@ -145,7 +145,7 @@ $link-active-color--inverted: jkl.$color-snohvit;
 
     &:hover,
     html:not([data-mousenavigation]) &:focus {
-        &:before {
+        &::before {
             transform: translateX(-33%);
         }
     }
