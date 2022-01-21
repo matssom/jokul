@@ -1,3 +1,4 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-require("../../gulpfile")(require("gulp"));
-/* eslint-enable @typescript-eslint/no-var-requires */
+import gulp from "gulp";
+import rootGulpFile from "../../gulpfile.js";
+
+rootGulpFile(gulp);

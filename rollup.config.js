@@ -1,7 +1,6 @@
 import { nodeResolve } from "@rollup/plugin-node-resolve";
 import { babel } from "@rollup/plugin-babel";
 import commonjs from "@rollup/plugin-commonjs";
-import { terser } from "rollup-plugin-terser";
 import fs from "fs";
 import path from "path";
 
@@ -19,8 +18,6 @@ const defaultPlugins = [
     }),
     commonjs(),
 ];
-
-const uglifiedPlugins = [...defaultPlugins, terser({ ecma: "es5" })];
 
 function config(plugins) {
     return {
@@ -45,13 +42,7 @@ function configWithOutput(config, output) {
     return Object.assign({}, config, { output });
 }
 
-export default [
-    configWithOutput(config(defaultPlugins), { file: `${outputFolder}/cjs/index.js`, format: "commonjs" }),
-    configWithOutput(config(defaultPlugins), { file: `${outputFolder}/esm/index.js`, format: "esm" }),
-    configWithOutput(config(defaultPlugins), { file: `${outputFolder}/browser/index.js`, format: "esm" }),
-    configWithOutput(config(uglifiedPlugins), { file: `${outputFolder}/esm/index.min.js`, format: "esm" }),
-    configWithOutput(config(uglifiedPlugins), { file: `${outputFolder}/browser/index.min.js`, format: "esm" }),
-];
+export default [configWithOutput(config(defaultPlugins), { file: `${outputFolder}/esm/index.js`, format: "esm" })];
 
 function getFremtindPackageNames() {
     const basePackagePath = path.resolve(__dirname, "packages");
