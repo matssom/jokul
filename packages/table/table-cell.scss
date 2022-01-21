@@ -2,16 +2,6 @@
 @use "~@fremtind/jkl-core/mixins/_all.scss" as mixins;
 
 $focus-ring-width: jkl.rem(2px);
-$expand-button-focus-color: jkl.$color-granitt;
-$expand-button-focus-color--inverted: jkl.$color-snohvit;
-
-@include jkl.helper-light-mode-variables {
-    --expand-button-focus-color: #{$expand-button-focus-color};
-}
-
-@include jkl.helper-dark-mode-variables {
-    --expand-button-focus-color: #{$expand-button-focus-color--inverted};
-}
 
 .jkl-table-cell {
     @include jkl.text-style("body");
