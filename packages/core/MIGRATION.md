@@ -2,9 +2,26 @@
 
 ## Til `jkl-core@9.0.0`
 
-Versjonen fjerner støtte for Internet Explorer.
+Vårrengjøringsreleasen.
+
+tl;dr:
+
+-   Dropper IE-støtte
+-   Fjerner `inverted` og `negative`-props
+-   Bygger bare uminifiserte ES Modules, noe som sannsynligvis ikke får følger for deg
+-   Renamet noen Sass-variabler og funksjoner du sannsynligvis ikke bruker
+
+### Dropper IE-støtte
+
+Versjonen fjerner støtte for Internet Explorer. Alt av gammelt rusk i Sasskode er ryddet vekk.
+
+### Fjerner `inverted` og `negative`-props
 
 Propsene `inverted` og `negative` er fjernet (de var merket som deprecated for en stund siden). Bruk `data-theme="dark"` om du trenger funksjonaliteten. Se [bloggposten om temaet](https://jokul.fremtind.no/blog/darkmode/) hvis du lurer på hvordan.
+
+### Bygger bare uminifiserte ES Modules
+
+Siden vi dropper IE-støtte gjør vi noen moderniseringer i hvordan Jøkuls React-pakker bygges. CommonJS og "browserklare" minifiserte filer blir ikke lenger bygget. Om du er på Node LTS (16.x i skrivende stund) og bare har importert pakkene på vanlig vis (typ `import { PrimaryButton } from "@fremtind/jkl-button-react";`) skal det ikke være noe du trenger å gjøre.
 
 ### Sass-endringer
 
