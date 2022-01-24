@@ -9159,6 +9159,16 @@ cssnano-preset-default@^5.1.5:
     postcss-svgo "^5.0.3"
     postcss-unique-selectors "^5.0.1"
 
+cssnano-preset-lite@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/cssnano-preset-lite/-/cssnano-preset-lite-2.0.2.tgz#2da6888532ed964ea5738d0d16f159fd559deb28"
+  integrity sha512-i4AmNxiYmsv1i5wOaRVR1fc/Y3fkl0TRxDkYgdrNP6stsrbE/XgIofVKX0FzB+mvlRtYwKw+vqHR1sVaNPhiRg==
+  dependencies:
+    cssnano-utils "^3.0.0"
+    postcss-discard-comments "^5.0.1"
+    postcss-discard-empty "^5.0.1"
+    postcss-normalize-whitespace "^5.0.2"
+
 cssnano-utils@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/cssnano-utils/-/cssnano-utils-2.0.1.tgz#8660aa2b37ed869d2e2f22918196a9a8b6498ce2"
