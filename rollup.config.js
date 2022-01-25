@@ -45,10 +45,12 @@ function configWithOutput(config, output) {
 export default [configWithOutput(config(defaultPlugins), { file: `${outputFolder}/esm/index.js`, format: "esm" })];
 
 function getFremtindPackageNames() {
+    const ignore = [".DS_Store"];
     const basePackagePath = path.resolve(__dirname, "packages");
     const packagesFolderNames = fs.readdirSync(basePackagePath);
 
     return packagesFolderNames
+        .filter((packageFolderName) => !ignore.includes(packageFolderName))
         .map((packageFolderName) => {
             try {
                 const packageJson = fs.readFileSync(path.resolve(basePackagePath, packageFolderName, "package.json"));
