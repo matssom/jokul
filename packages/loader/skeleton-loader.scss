@@ -1,0 +1,123 @@
+@use "~@fremtind/jkl-core/jkl";
+@use "~@fremtind/jkl-core/mixins/_all.scss" as mixins;
+
+@include jkl.helper-light-mode-variables {
+    --jkl-skeleton-element-color: #{jkl.$color-varde};
+    --jkl-skeleton-sweeper-color: #{jkl.$color-snohvit};
+}
+
+@include jkl.helper-dark-mode-variables {
+    --jkl-skeleton-element-color: #{jkl.$color-stein};
+    --jkl-skeleton-sweeper-color: #{jkl.$color-granitt};
+}
+
+.jkl-skeleton-animation {
+    --jkl-skeleton-sweep-duration: 3s;
+
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+        content: " ";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: jkl.rem(200px);
+        background: linear-gradient(
+            89.17deg,
+            rgb(249 249 249 / 0%) 0.8%,
+            var(--jkl-skeleton-sweeper-color) 50.09%,
+            rgb(249 249 249 / 0%) 96.31%
+        );
+        animation: var(--jkl-skeleton-sweep-duration) ease infinite sweep;
+
+        @keyframes sweep {
+            0% {
+                transform: translateX(calc(0vw - 200px));
+            }
+
+            80%,
+            100% {
+                transform: translateX(calc(100vw + calc(200px * 2)));
+            }
+        }
+    }
+
+    @include mixins.small-device {
+        width: jkl.rem(150px);
+    }
+
+    &--compact::after {
+        width: jkl.rem(150px);
+    }
+}
+
+.jkl-skeleton-element {
+    background-color: var(--jkl-skeleton-element-color);
+
+    &--circle {
+        border-radius: 50%;
+    }
+}
+
+.jkl-skeleton-input {
+    display: flex;
+    flex-direction: column;
+    gap: jkl.$spacing-s;
+
+    &__checkbox {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: jkl.$spacing-xs;
+    }
+
+    @include mixins.small-device {
+        gap: jkl.$spacing-xs;
+    }
+
+    &--compact::after {
+        gap: jkl.$spacing-xs;
+    }
+}
+
+.jkl-skeleton-table {
+    display: flex;
+    flex-direction: column;
+
+    &__header,
+    &__row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border-bottom: solid 1px var(--jkl-skeleton-element-color);
+    }
+
+    &__header {
+        padding: jkl.$spacing-s jkl.$spacing-xs;
+    }
+
+    &__row {
+        padding: jkl.$spacing-m jkl.$spacing-xs;
+    }
+
+    @include mixins.small-device {
+        &__header {
+            padding: jkl.$spacing-xs jkl.$spacing-2xs;
+        }
+
+        &__row {
+            padding: jkl.$spacing-s jkl.$spacing-2xs;
+        }
+    }
+
+    &--compact::after {
+        &__header {
+            padding: jkl.$spacing-xs jkl.$spacing-2xs;
+        }
+
+        &__row {
+            padding: jkl.$spacing-s jkl.$spacing-2xs;
+        }
+    }
+}
