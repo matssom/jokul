@@ -22,8 +22,8 @@
         "test": "echo \"Error: run tests from root\" && exit 1",
         "dev": "echo \"Error: run dev from scaffold-react\" && exit 1"
     },
-    "dependencies": {
-        "@fremtind/jkl-core": "^9.0.0"
+    "peerDependencies": {
+        "@fremtind/jkl-core": "^9.0.1"
     },
     "repository": {
         "type": "git",

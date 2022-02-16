@@ -33,10 +33,10 @@
     },
     "dependencies": {
         "@babel/runtime": "^7.16.7",
-        "@fremtind/jkl-core": "^9.0.0",
         "@fremtind/jkl-scaffold": "^1.0.0-alpha.0"
     },
     "peerDependencies": {
+        "@fremtind/jkl-core": "^9.0.1",
         "@types/react": "^16.8.6 || ^17.0.0",
         "@types/react-dom": "^16.8.6 || ^17.0.0",
         "react": "^16.8.6 || ^17.0.0",
