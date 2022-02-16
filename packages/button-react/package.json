@@ -37,16 +37,14 @@
     },
     "dependencies": {
         "@babel/runtime": "^7.16.7",
-        "@fremtind/jkl-button": "^7.0.1",
-        "@fremtind/jkl-loader-react": "^7.1.9",
-        "classnames": "^2.2.6"
-    },
-    "devDependencies": {
-        "@fremtind/jkl-toggle-switch-react": "^7.0.1"
+        "@fremtind/jkl-button": "^7.0.1"
     },
     "peerDependencies": {
+        "@fremtind/jkl-loader-react": "^7.1.9",
+        "@fremtind/jkl-toggle-switch-react": "^7.0.1",
         "@types/react": "^16.8.6 || ^17.0.0",
         "@types/react-dom": "^16.8.6 || ^17.0.0",
+        "classnames": "^2.2.6",
         "react": "^16.8.6 || ^17.0.0",
         "react-dom": "^16.8.6 || ^17.0.0"
     },

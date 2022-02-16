@@ -24,10 +24,8 @@
         "test": "echo \"Error: run tests from root\" && exit 1",
         "dev": "parcel example/index.html"
     },
-    "dependencies": {
-        "@fremtind/jkl-core": "^9.0.1",
-        "@fremtind/jkl-select": "^7.0.1",
-        "@fremtind/jkl-text-input": "^7.0.2"
+    "peerDependencies": {
+        "@fremtind/jkl-core": "^9.0.1"
     },
     "repository": {
         "type": "git",

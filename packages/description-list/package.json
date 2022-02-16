@@ -24,7 +24,7 @@
         "type": "git",
         "url": "git+https://github.com/fremtind/jokul.git"
     },
-    "dependencies": {
+    "peerDependencies": {
         "@fremtind/jkl-core": "^9.0.1"
     },
     "scripts": {

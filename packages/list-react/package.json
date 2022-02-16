@@ -36,12 +36,12 @@
     },
     "dependencies": {
         "@babel/runtime": "^7.16.7",
-        "@fremtind/jkl-list": "^6.0.11",
-        "classnames": "^2.2.6"
+        "@fremtind/jkl-list": "^6.0.11"
     },
     "peerDependencies": {
         "@types/react": "^16.8.6 || ^17.0.0",
         "@types/react-dom": "^16.8.6 || ^17.0.0",
+        "classnames": "^2.2.6",
         "react": "^16.8.6 || ^17.0.0",
         "react-dom": "^16.8.6 || ^17.0.0"
     },

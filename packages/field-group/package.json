@@ -22,7 +22,7 @@
         "dev": "parcel example/index.html",
         "test": "echo \"Error: run tests from root\" && exit 1"
     },
-    "dependencies": {
+    "peerDependencies": {
         "@fremtind/jkl-core": "^9.0.1"
     },
     "repository": {

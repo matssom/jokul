@@ -33,14 +33,14 @@
     },
     "dependencies": {
         "@babel/runtime": "^7.16.7",
-        "@fremtind/jkl-core": "^9.0.1",
-        "@fremtind/jkl-react-hooks": "^7.1.1",
-        "@fremtind/jkl-tabs": "^1.2.8",
-        "nanoid": "^3.2.0"
+        "@fremtind/jkl-tabs": "^1.2.8"
     },
     "peerDependencies": {
+        "@fremtind/jkl-core": "^9.0.1",
+        "@fremtind/jkl-react-hooks": "^7.1.1",
         "@types/react": "^16.8.6 || ^17.0.0",
         "@types/react-dom": "^16.8.6 || ^17.0.0",
+        "nanoid": "^3.2.0",
         "react": "^16.8.6 || ^17.0.0",
         "react-dom": "^16.8.6 || ^17.0.0"
     },

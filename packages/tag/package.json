@@ -24,7 +24,7 @@
         "test": "echo \"Error: run tests from root\" && exit 1",
         "dev": "echo \"Error: run dev from tag-react\" && exit 1"
     },
-    "dependencies": {
+    "peerDependencies": {
         "@fremtind/jkl-core": "^9.0.1"
     },
     "repository": {
