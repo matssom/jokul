@@ -4,10 +4,11 @@ Hopefully someone (us?) will write types for it sometime soon */
 import CoreToggle from "@nrk/core-toggle/jsx";
 import React, { FC, ReactNode, useState } from "react";
 import { useAnimatedHeight } from "@fremtind/jkl-react-hooks";
-import classNames from "classnames";
+import cn from "classnames";
 import { ExpandArrow } from "./ExpandArrow";
+import { DataTestAutoId } from "@fremtind/jkl-core";
 
-export interface AccordionItemProps {
+export interface AccordionItemProps extends DataTestAutoId {
     title: string;
     children: ReactNode;
     startExpanded?: boolean;
@@ -21,13 +22,10 @@ export const AccordionItem: FC<AccordionItemProps> = ({
     className,
     startExpanded = false,
     onClick,
+    ...rest
 }) => {
     const [isOpen, setIsOpen] = useState(startExpanded);
     const [elementRef] = useAnimatedHeight(isOpen);
-    const componentClassName = classNames("jkl-accordion-item", className, {
-        "jkl-accordion-item--expanded": isOpen,
-    });
-
     const onToggle = (e: Event) => {
         if (e.defaultPrevented) {
             return;
@@ -36,7 +34,13 @@ export const AccordionItem: FC<AccordionItemProps> = ({
     };
 
     return (
-        <div data-testid="jkl-accordion-item" className={componentClassName}>
+        <div
+            data-testid="jkl-accordion-item"
+            className={cn("jkl-accordion-item", className, {
+                "jkl-accordion-item--expanded": isOpen,
+            })}
+            {...rest}
+        >
             <button
                 className="jkl-accordion-item__title"
                 type="button"

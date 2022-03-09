@@ -1,7 +1,8 @@
 import cn from "classnames";
 import React, { FC } from "react";
+import { DataTestAutoId } from "@fremtind/jkl-core";
 
-export interface AccordionProps {
+export interface AccordionProps extends DataTestAutoId {
     className?: string;
 }
 

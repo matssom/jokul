@@ -1,21 +1,21 @@
-import React, { FC } from "react";
-import classNames from "classnames";
+import React, { VFC } from "react";
+import cn from "classnames";
+import { DataTestAutoId } from "@fremtind/jkl-core";
 
-interface Props {
+interface ExpandArrowProps extends DataTestAutoId {
     className?: string;
+    /** @default false */
     expanded?: boolean;
 }
 
-export const ExpandArrow: FC<Props> = ({ expanded = false, className }) => {
-    const componentClassName = classNames(
-        {
-            "jkl-expand-arrow": true,
-            "jkl-expand-arrow--expanded": expanded,
-        },
-        className,
-    );
+export const ExpandArrow: VFC<ExpandArrowProps> = ({ expanded = false, className, ...rest }) => {
     return (
-        <span className={componentClassName}>
+        <span
+            className={cn("jkl-expand-arrow", className, {
+                "jkl-expand-arrow--expanded": expanded,
+            })}
+            {...rest}
+        >
             <svg className="jkl-expand-arrow__down" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M6.90762 13.8828L11.9272 8.86326L12.7093 9.64537L6.35463 16L-1.68645e-06 9.64536L0.782101 8.86326L5.80156 13.8827L5.80156 1.01438e-06L6.90762 1.20777e-06L6.90762 13.8828Z"
